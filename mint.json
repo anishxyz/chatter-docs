@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Chatter",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/chatter-dark.svg",
+    "light": "/logo/chatter-light.svg"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/symbol.png",
   "colors": {
     "primary": "#9563FF",
     "light": "#AE87FF",
@@ -20,13 +20,13 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Book a Demo",
+      "url": "https://calendly.com/trychatter/30min"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Platform",
+    "url": "https://platform.trychatter.ai"
   },
   "tabs": [
     {
@@ -54,11 +54,15 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction", "quickstart"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "Chatter",
+      "pages": ["chatter/setup", "chatter/prompts"]
+    },
+    {
+      "group": "Chatterfile",
+      "pages": ["chatterfile/setup", "chatterfile/prompts"]
     },
     {
       "group": "API Documentation",
@@ -67,7 +71,7 @@
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/get",
+        "api-reference/endpoint/auth",
         "api-reference/endpoint/create",
         "api-reference/endpoint/update",
         "api-reference/endpoint/delete"
@@ -75,8 +79,12 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "linkedin": "https://www.linkedin.com/company/trychatter"
+  },
+  "api": {
+    "baseUrl": "https://backend.trychatter.ai/sdk",
+    "auth": {
+      "method": "bearer"
+    }
   }
 }
