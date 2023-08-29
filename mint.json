@@ -47,12 +47,12 @@
       "pages": ["introduction", "quickstart"]
     },
     {
-      "group": "Chatter",
-      "pages": ["chatter/setup", "chatter/prompts"]
-    },
-    {
       "group": "Chatterfile",
       "pages": ["chatterfile/setup", "chatterfile/createfile","chatterfile/prompts"]
+    },
+    {
+      "group": "Chatter Platform",
+      "pages": ["chatter/setup", "chatter/prompts"]
     },
     {
       "group": "API Documentation",
