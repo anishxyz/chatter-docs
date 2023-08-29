@@ -1,0 +1,36 @@
+---
+title: Prompts
+description: "How to use prompts from your Chatterfile"
+---
+
+## Accessing a prompt
+
+### Get Prompt
+All prompts and attributes stored in Chatterfile can be accessed using the `get_prompt` method.
+This method takes a single argument, `id` which is the `prompt_id` of the prompt you want to access. You can
+get the full prompt configuration by passing the `prompt_id` to the `get_prompt` method. Note, prompt templates are
+converted to jinja2 syntax when they are returned.
+
+```python
+prompt_config = chatterfile.get_prompt(prompt_id='PROMPT_ID')
+```
+
+It is returned as a dictionary so you can access the prompt's attributes like so:
+
+```python
+prompt_atr = chatterfile.get_prompt(prompt_id='PROMPT_ID')['ATTRIBUTE_NAME']
+```
+
+### Render Prompt
+
+You prompts likely contain some variables that you want to replace with values from your code. This can be
+done via the `render_prompt` method. This method takes in the prompt_id of the prompt you would like to render
+and then a dictionary of variables to replace in the prompt. The dictionary should be in the format of
+`{'VARIABLE_NAME': 'VARIABLE_VALUE'}`.
+
+```python
+rendered_prompt = chatterfile.render_prompt(
+    prompt_id='PROMPT_ID',
+    variables={'VARIABLE_NAME_1': 'VARIABLE_VALUE_1', 'VARIABLE_NAME_2': 'VARIABLE_VALUE_2'}
+)
+```

@@ -75,7 +75,7 @@
     "linkedin": "https://www.linkedin.com/company/trychatter"
   },
   "api": {
-    "baseUrl": "http://127.0.0.1:8000"
+    "baseUrl": "https://backend.trychatter.ai"
   },
-  "openapi" : "http://127.0.0.1:8000/openapi.json"
+  "openapi" : "https://backend.trychatter.ai/openapi.json"
 }

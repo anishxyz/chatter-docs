@@ -1,0 +1,20 @@
+---
+title: Prompts
+description: "How to use prompts from Chatter Platform"
+---
+
+## Accessing a prompt
+
+### Render Prompt
+
+You prompts likely contain some variables that you want to replace with values from your code. This can be
+done via the `render_prompt` method. This method takes in the `prompt_id` of the prompt you would like to render
+and then a dictionary of variables to replace in the prompt. The dictionary should be in the format of
+`{'VARIABLE_NAME': 'VARIABLE_VALUE'}`.
+
+```python
+rendered_prompt = chatter.render_prompt(
+    prompt_id='PROMPT_ID',
+    variables={'VARIABLE_NAME_1': 'VARIABLE_VALUE_1', 'VARIABLE_NAME_2': 'VARIABLE_VALUE_2'}
+)
+```
