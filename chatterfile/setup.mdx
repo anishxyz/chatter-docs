@@ -1,0 +1,27 @@
+---
+title: Setup
+description: "Chatterfile Setup"
+---
+
+## Get started
+
+Start with importing the Chatterfile class from the Chatter SDK.
+
+```python
+from chatter_sdk import Chatterfile
+```
+
+## Accessing the Chatterfile
+
+If your chatterfile is in the same directory and titled 'Chatterfile' you can simply call the Chatterfile class.
+
+```python
+chatterfile = Chatterfile()
+```
+
+If you have titled it something else (we recommend calling it Chatterfile!) or its in a different directory,
+you can use the path argument to specify the path to your Chatterfile.
+
+```python
+chatterfile = Chatterfile(path='path/to/Chatterfile')
+```

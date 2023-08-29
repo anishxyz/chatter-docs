@@ -1,0 +1,25 @@
+---
+title: Chatterfile Syntax
+description: "Syntax and examples for creating a Chatterfile."
+---
+
+## Syntax
+
+Chatterfile uses a slightly annotated form of YAML. You can input data using standard YAML
+and then mark it using tags such as @prompt_id for prompts or @config for configurations.
+Data following the @ tag is associated with the tag until the next tag is encountered.
+
+## Prompts
+
+Input prompts using the @prompt_id tag. The prompt id is used to reference the prompt in your code.
+Each prompt must have a unique id or it may be overwritten. Within the prompt body, you can include
+the model_family, model, prompt and params.
+
+```yaml
+@prompt_id: privilege
+model_family: OpenAI
+model: gpt-3.5-turbo
+prompt: "prompt here as jinja2 template or formatted python string"
+params:
+	temperature: 0
+```

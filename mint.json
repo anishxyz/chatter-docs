@@ -52,19 +52,22 @@
     },
     {
       "group": "Chatterfile",
-      "pages": ["chatterfile/setup", "chatterfile/prompts"]
+      "pages": ["chatterfile/setup", "chatterfile/createfile","chatterfile/prompts"]
     },
     {
       "group": "API Documentation",
       "pages": ["api-reference/authentication"]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Auth",
       "pages": [
-        "api-reference/endpoint/auth",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/auth"
+      ]
+    },
+    {
+      "group": "Prompt",
+      "pages": [
+        "api-reference/endpoint/render-prompt"
       ]
     }
   ],
@@ -72,9 +75,7 @@
     "linkedin": "https://www.linkedin.com/company/trychatter"
   },
   "api": {
-    "baseUrl": "https://backend.trychatter.ai/sdk",
-    "auth": {
-      "method": "bearer"
-    }
-  }
+    "baseUrl": "http://127.0.0.1:8000"
+  },
+  "openapi" : "http://127.0.0.1:8000/openapi.json"
 }
