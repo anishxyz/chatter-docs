@@ -23,7 +23,7 @@ prompt_atr = chatterfile.get_prompt(prompt_id='PROMPT_ID')['ATTRIBUTE_NAME']
 
 ### Render Prompt
 
-You prompts likely contain some variables that you want to replace with values from your code. This can be
+Your prompts likely contain some variables that you want to replace with values from your code. This can be
 done via the `render_prompt` method. This method takes in the prompt_id of the prompt you would like to render
 and then a dictionary of variables to replace in the prompt. The dictionary should be in the format of
 `{'VARIABLE_NAME': 'VARIABLE_VALUE'}`.
@@ -34,3 +34,52 @@ rendered_prompt = chatterfile.render_prompt(
     variables={'VARIABLE_NAME_1': 'VARIABLE_VALUE_1', 'VARIABLE_NAME_2': 'VARIABLE_VALUE_2'}
 )
 ```
+
+### Run Prompt
+
+Run prompts from Chatterfile using the `run_prompt` method. Input the `prompt_id` and variables to inject as `variables`.
+This method will call the LLM based on the configuration in the Chatterfile (though you can override these) and return
+the response from the LLM. With simplified mode, you'll get just the response text.
+
+```python
+result = chatterfile.run_prompt(prompt_id='president',
+                                variables={"rank": "first"},
+                                simplified=True)
+```
+
+<Accordion title="run_prompt(props)">
+    <ResponseField name="prompt_id" type="string" required>
+      prompt_id referencing prompt in Chatterfile
+    </ResponseField>
+
+    <ResponseField name="variables" type="object">
+      Dictionary of variables to replace in the prompt in the form `{'VARIABLE_NAME_1': 'VARIABLE_VALUE_1', 'VARIABLE_NAME_2': 'VARIABLE_VALUE_2'}`
+    </ResponseField>
+
+    <ResponseField name="key_id" type="string">
+        `key_id` to reference api keys in Chatterfile to be used in call. Defaults to first keys chunk declared
+        in Chatterfile
+    </ResponseField>
+
+    <ResponseField name="simplified" type="boolean" default="False">
+      Simplified mode limits LLM response to just the response text
+    </ResponseField>
+
+    <ResponseField name="model" type="string">
+      Override model in Chatterfile
+    </ResponseField>
+
+    <ResponseField name="model_family" type="string">
+      Override model family in Chatterfile
+    </ResponseField>
+
+    <ResponseField name="params" type="object">
+      Override params in Chatterfile
+    </ResponseField>
+
+    <ResponseField name="prompt_override" type="object">
+      Override prompt in Chatterfile
+    </ResponseField>
+</Accordion>
+
+

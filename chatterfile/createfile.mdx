@@ -23,3 +23,16 @@ prompt: "prompt here as jinja2 template or formatted python string"
 params:
 	temperature: 0
 ```
+
+## Key Sets
+
+Input API keys for LLMs to be used when running Chatterfile prompts. You can store them as references
+to environment variables (< 30 char) or as strings (> 30 char). You can select which key set to use when
+running prompts by passing the key_id to the `key_id` argument. It defaults to the first key set declaration
+in the Chatterfile
+
+```yaml Example Key Set
+@keys: production
+OpenAI: OPENAI_API_KEY
+Anthropic: "2c413de8-d5dc-4efc-a0f3-995cd6f7803e"
+```
