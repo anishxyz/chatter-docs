@@ -1,0 +1,76 @@
+---
+title: Testing Suite
+description: "Testing on Chatter Platform"
+---
+## What is a Testing Suite?
+
+A testing suite is where you can test/run a chain on Chatter Platform. Every chain has an associate testing suite on Chatter.
+A testing suite is made up of test cases which are used to test the chain. A basic test case is a set of inputs and expected outputs via assertions.
+Prompts may contain variables and you can assign unique values to them in a test case. You can run your chain in many configurations
+in the testing suite, from a single cell, a single test case to all test cases in the suite.
+
+## Accessing the testing suite
+
+1. Open your workspace in Chatter
+
+2. Navigate to the chain you would like to test/run
+
+3. Click on the beaker in the top right corner. It will open the testing panel on the right side of the screen.
+
+## Running a chain in the testing suite
+
+There are many run configuration options in Chatter. You can run a single cell, a single test case, or all test cases in the suite.
+
+### Running a single test cae on a single cell
+
+1. Navigate to the test case to run
+
+2. Find the output box of the cell you would like to run (they are in the same order as the cells in the chain)
+
+3. Click the `Run Test on ___` button to run the test case on a specific cell
+
+4. After the test case has finished running, the output box will be updated with the results of the test case.
+You can find details of the run in the history panel under the 'Cell Histories' tab and a brief summary in the bottom right corner of the results box.
+
+### Running a single test case
+
+1. Navigate to the test case to run
+
+2. Click the `Run Test on Chain` button to run the test case on all cells in the chain.
+
+3. After the test case has finished running, the output box(es) will be updated with the results of the test case.
+You can find details of the run in the history panel under the 'Chain Histories' tab and a brief summary in the bottom right corner of the results box.
+A banner will also update at the top of the test case with a summary of the run.
+
+### Running an entire testing suite
+
+1. Navigate to the testing suite to run
+
+2. Click the `Run Suite` button at the top of the testing panel
+
+3. After the test case has finished running, the output box(es) will be updated in each test case.
+You can find details of the run in the history panel under the 'Chain Histories' tab.
+A banner will also update at the top of the testing panel with a summary of the run.
+
+# Test Cases
+
+## Creating a test case
+
+1. Navigate to the testing suite that you would like to add a test case to
+
+2. Click on the `Add Chain` button towards the top of the testing panel
+
+3. A new test case will appear at the bottom of the accordion of test cases. Click on the last one to open the newly added test case.
+
+## Setting up variables in a test case
+
+1. Navigate to the test case that you would like to set up
+
+2. Variables in the chain will automatically be added to the test case. You can assign values to them by editing the text box next to the variable name.
+This is the text that the variables will be replaced with in prompt. If you are inputting large format text, it may be helpful to hover and click on the
+`Expand` button to open a larger text box.
+
+3. (optional) If you would like to change the 'type' of the variable, navigate to the `Variable Configuration` accordion. Here you can change the type of any variable in the chain.
+Chatter will convert the input to the type you specify. For example, if you have a variable that is a number, you can change the type to `number` and Chatter will convert the input to a number.
+This can be especially powerful when using Jinja2 to format your prompt.
+

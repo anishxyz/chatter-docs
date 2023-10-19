@@ -55,7 +55,8 @@
         "chatterplatform/authentication",
         "chatterplatform/vault",
         "chatterplatform/chain",
-        "chatterplatform/cell"
+        "chatterplatform/cell",
+        "chatterplatform/test-suite"
       ]
     },
     {
