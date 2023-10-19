@@ -47,12 +47,16 @@
       "pages": ["introduction", "quickstart"]
     },
     {
-      "group": "Chatterfile",
-      "pages": ["chatterfile/setup", "chatterfile/createfile","chatterfile/prompts"]
+        "group": "Chatter Platform",
+        "pages": ["chatterplatform/authentication", "chatterplatform/vault"]
     },
     {
-      "group": "Chatter Platform",
-      "pages": ["chatter/setup", "chatter/prompts"]
+      "group": "Chatter Platform API",
+      "pages": ["chatterapi/setup", "chatterapi/prompts"]
+    },
+    {
+      "group": "Chatterfile",
+      "pages": ["chatterfile/setup", "chatterfile/createfile","chatterfile/prompts"]
     },
     {
       "group": "API Documentation",

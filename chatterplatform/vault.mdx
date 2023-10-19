@@ -1,0 +1,45 @@
+---
+title: Vault
+description: "Managing secrets with Vault"
+---
+## What is a Vault?
+
+A vault is a secure place to store secrets. Most LLMs require API keys in order to access them. These can be securely
+stored in a Chatter Vault. Simply put, a vault is a configuration of API keys. You select a model family (ex. OpenAI) and input a key for it.
+Whenever the vault is active, the API key will be used for all models in that family.
+For example you could have one for prod, dev and staging to track costs. Or you could have one for each of your projects. The choice is yours.
+
+<Note>You must have an active vault with a valid key for a model family in order to use the model family in your workspace</Note>
+
+
+## Creating a vault
+
+<Frame>
+  <img src="/chatterplatform/images/vaultbutton.png" />
+</Frame>
+
+1. In your workspace, navigate to the 'vaults' panel.
+This can be found in the bottom left corner of the workspace (inside the sidebar).
+
+2. Click the 'Create Vault' button.
+
+3. Name your vault
+
+4. Select a model family you want to use in this vault. Add the associated API key
+
+5. (optional) Add more model families if needed via 'Add key'
+
+6. Click 'Create' and you will be returned to the Vaults panel
+
+7. Click 'Activate' to use the associated vault
+
+## Using a vault
+
+To use a vault you must activate it. This can be done by clicking the 'Activate' button in the vaults panel.
+
+1. In your workspace, navigate to the 'vaults' panel.
+This can be found in the bottom left corner of the workspace (inside the sidebar).
+
+2. Click 'Activate' to use the associated vault
+
+Once a vault is activated, all runs made in the workspace will use the vault's API keys.

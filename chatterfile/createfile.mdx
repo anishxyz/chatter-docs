@@ -11,10 +11,19 @@ Data following the @ tag is associated with the tag until the next tag is encoun
 
 ## Prompts
 
-Input prompts using the @prompt_id tag. The prompt_id is used to reference the prompt in your code.
+Input prompts using the `@prompt_id` tag. The prompt_id is used to reference the prompt in your code.
 Each prompt must have a unique id or it may be overwritten. Within the prompt body, you can include
 the model_family, model, prompt, params and more.
 
+<CodeGroup>
+
+```yaml Template
+@prompt_id: PROMPT_ID
+model_family:
+model:
+prompt:
+params:
+```
 ```yaml Example Prompt
 @prompt_id: privilege
 model_family: OpenAI
@@ -23,6 +32,7 @@ prompt: "prompt here as jinja2 template or formatted python string"
 params:
 	temperature: 0
 ```
+</CodeGroup>
 
 ## Key Sets
 
@@ -31,8 +41,14 @@ to environment variables (< 30 char) or as strings (> 30 char). You can select w
 running prompts by passing the key_id to the `key_id` argument. It defaults to the first key set declaration
 in the Chatterfile
 
+<CodeGroup>
+```yaml Template
+@keys: KEY_ID
+MODEL_FAMILY: KEY
+```
 ```yaml Example Key Set
 @keys: production
 OpenAI: OPENAI_API_KEY
 Anthropic: "2c413de8-d5dc-4efc-a0f3-995cd6f7803e"
 ```
+</CodeGroup>
