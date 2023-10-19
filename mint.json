@@ -52,6 +52,7 @@
     {
       "group": "Chatter Platform",
       "pages": [
+        "chatterplatform/quickstart",
         "chatterplatform/authentication",
         "chatterplatform/vault",
         "chatterplatform/chain",
