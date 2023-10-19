@@ -1,0 +1,28 @@
+---
+title: Cell
+description: "Creating cells on Chatter Platform"
+---
+## What is a Cell?
+
+A cell represents a call to an LLM. You can configure a cell to call any LLM (model family and model) in your workspace.
+From there you can type in the prompt that you would like to send to the LLM and adjust any parameters (ex. temperature). This prompt can be viewed as a template
+and take in variables that you can define in your testing suite.
+
+## Creating a Cell
+
+1. Open your workspace in Chatter
+
+2. Navigate to the chain you would like to add a cell to
+
+3. Click the "Add Cell" button
+
+4. Select the LLM you would like to use. In the top left of the cell, there is a dropdown menu that allows you to select the LLM model family (ex. OpenAI) you would like to use.
+After that you can select a model (ex. gpt-4) within the family to use.
+
+5. Write your prompt (the editor allows for Jinja2 syntax). This is the text that will be sent to the LLM. You can use variables in your prompt by using the format `{{variable_name}}`. You can define these variables later in your testing suite via test cases.
+
+6. Adjust any parameters. Available parameters can be found below the model details in the top left of the cell.
+
+7. (optional) Name your cell. Click on the 'New Cell' title in the top right of the cell to edit the name.
+
+8. (optional) Name your output. Fill in the text box 'Name of output' to name the output of the cell. This means you can access the output of this cell in future cells in the chain via this variable name.

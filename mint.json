@@ -44,23 +44,40 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart"]
+      "pages": [
+        "introduction",
+        "quickstart"
+      ]
     },
     {
-        "group": "Chatter Platform",
-        "pages": ["chatterplatform/authentication", "chatterplatform/vault", "chatterplatform/chain"]
+      "group": "Chatter Platform",
+      "pages": [
+        "chatterplatform/authentication",
+        "chatterplatform/vault",
+        "chatterplatform/chain",
+        "chatterplatform/cell"
+      ]
     },
     {
       "group": "Chatter Platform API",
-      "pages": ["chatterapi/setup", "chatterapi/prompts"]
+      "pages": [
+        "chatterapi/setup",
+        "chatterapi/prompts"
+      ]
     },
     {
       "group": "Chatterfile",
-      "pages": ["chatterfile/setup", "chatterfile/createfile","chatterfile/prompts"]
+      "pages": [
+        "chatterfile/setup",
+        "chatterfile/createfile",
+        "chatterfile/prompts"
+      ]
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
+      "pages": [
+        "api-reference/authentication"
+      ]
     },
     {
       "group": "Auth",
@@ -81,5 +98,5 @@
   "api": {
     "baseUrl": "https://backend.trychatter.ai"
   },
-  "openapi" : "https://backend.trychatter.ai/openapi.json"
+  "openapi": "https://backend.trychatter.ai/openapi.json"
 }
